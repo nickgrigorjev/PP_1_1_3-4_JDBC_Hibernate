@@ -1,16 +1,14 @@
 package jm.task.core.jdbc;
 
-import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
 import jm.task.core.jdbc.service.UserService;
 import jm.task.core.jdbc.service.UserServiceImpl;
 
 /**
  * Создание таблицы User(ов)
- *  1. Добавление 4 User(ов) в таблицу с данными на свой выбор. После каждого добавления должен быть вывод в консоль
- *     (User с именем – name добавлен в базу данных)
- *  2. Получение всех User из базы и вывод в консоль (должен быть переопределен toString в классе User)
- *  3. Очистка таблицы User(ов)
- *  4. Удаление таблицы
+ *  1. UserHibernateDaoImpl должен реализовывать интерфейс UserDao
+ *  2. В класс Util должна быть добавлена конфигурация для Hibernate (рядом с JDBC), без использования xml.
+ *  3. Service на этот раз использует реализацию dao через Hibernate
+ *  4. Методы создания и удаления таблицы пользователей в классе UserHibernateDaoImpl должны быть реализованы с помощью SQL.
  *  */
 public class Main {
     public static void main(String[] args) {
